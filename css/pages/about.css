@@ -1,0 +1,109 @@
+/* Founder page — about.html */
+
+.founder {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: var(--sp-12) 0;
+}
+
+.founder__hero {
+  text-align: center;
+  margin-bottom: var(--sp-12);
+}
+
+.founder__avatar {
+  width: 140px;
+  height: 140px;
+  margin: 0 auto var(--sp-6);
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-surface-2), var(--color-surface));
+  border: 2px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--color-accent-2);
+  overflow: hidden;
+}
+
+.founder__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.founder__name {
+  margin-bottom: var(--sp-2);
+}
+
+.founder__role {
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-accent-2);
+}
+
+.founder__body p {
+  margin-bottom: var(--sp-5);
+  color: var(--color-text);
+  line-height: 1.7;
+  font-size: var(--fs-md);
+}
+
+.founder__body h2 {
+  margin-top: var(--sp-12);
+  margin-bottom: var(--sp-4);
+}
+
+.founder__highlights {
+  list-style: none;
+  padding: 0;
+  margin: var(--sp-6) 0;
+  display: grid;
+  gap: var(--sp-3);
+}
+
+.founder__highlights li {
+  position: relative;
+  padding: var(--sp-3) var(--sp-3) var(--sp-3) var(--sp-8);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-left: 3px solid var(--color-accent);
+  border-radius: var(--r-md);
+  color: var(--color-text);
+  font-size: var(--fs-sm);
+}
+
+.founder__highlights li::before {
+  content: "▸";
+  position: absolute;
+  left: var(--sp-4);
+  top: var(--sp-3);
+  color: var(--color-accent-2);
+  font-weight: 700;
+}
+
+.founder__contact {
+  margin-top: var(--sp-12);
+  padding: var(--sp-8);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--r-lg);
+  text-align: center;
+}
+
+.founder__contact h3 {
+  margin-bottom: var(--sp-3);
+}
+
+.founder__contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--sp-4);
+  margin-top: var(--sp-4);
+  font-size: var(--fs-sm);
+}

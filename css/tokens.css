@@ -1,0 +1,68 @@
+/* Brand tokens — derived from the Ferrite Engineering logo (electric
+   blue ferrite-coil core dissolving into a cyan-teal burst of sparks
+   on a deep navy field). */
+
+:root {
+  /* ─── Colors ──────────────────────────────────────────────────── */
+  --color-bg:        #0A1220;  /* deep navy — matches the logo backdrop */
+  --color-surface:   #131C2E;  /* card/panel surface */
+  --color-surface-2: #1B2538;  /* hover / nested surface */
+  --color-border:    #25324A;  /* subtle border */
+  --color-text:      #E8EEF7;  /* near-white with cool blue tint */
+  --color-text-dim:  #8FA0BC;  /* muted text */
+
+  /* The two brand accents read as a gradient:
+     - blue:  the inductor coil and structural elements (left side of logo)
+     - cyan:  the digital-spark burst (right side of logo) */
+  --color-accent:        #2EA8FF;  /* electric blue */
+  --color-accent-bright: #56C2FF;  /* hover-state blue */
+  --color-accent-2:      #4FE3DA;  /* glowing cyan / teal */
+  --color-accent-2-bright: #7CF0E8;
+  --color-warn:    #FFB454;
+  --color-danger:  #FF5C7A;
+
+  /* Brand gradient — used on the wordmark, headline accents, etc. */
+  --gradient-brand: linear-gradient(90deg, var(--color-accent) 0%, var(--color-accent-2) 100%);
+
+  /* ─── Type ────────────────────────────────────────────────────── */
+  /* Wordmark / headline:   Space Grotesk (geometric, technical) */
+  /* Body:                  Inter (neutral, highly legible) */
+  --font-display: 'Space Grotesk', 'Inter', system-ui, -apple-system, sans-serif;
+  --font-sans:    'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono:    'JetBrains Mono', ui-monospace, 'SF Mono', monospace;
+
+  --fs-xs:  0.75rem;
+  --fs-sm:  0.875rem;
+  --fs-md:  1rem;
+  --fs-lg:  1.125rem;
+  --fs-xl:  1.5rem;
+  --fs-2xl: 2rem;
+  --fs-3xl: 3rem;
+  --fs-4xl: 4rem;
+
+  /* ─── Spacing (4px base) ──────────────────────────────────────── */
+  --sp-1: 0.25rem;
+  --sp-2: 0.5rem;
+  --sp-3: 0.75rem;
+  --sp-4: 1rem;
+  --sp-6: 1.5rem;
+  --sp-8: 2rem;
+  --sp-12: 3rem;
+  --sp-16: 4rem;
+  --sp-24: 6rem;
+
+  /* ─── Radii ───────────────────────────────────────────────────── */
+  --r-sm: 4px;
+  --r-md: 8px;
+  --r-lg: 12px;
+  --r-xl: 16px;
+
+  /* ─── Layout ──────────────────────────────────────────────────── */
+  --container-max: 1200px;
+
+  /* ─── Misc ────────────────────────────────────────────────────── */
+  --focus-ring: 0 0 0 3px rgba(46, 168, 255, 0.45);
+  --shadow-sm:  0 1px 2px rgba(0, 0, 0, 0.35);
+  --shadow-md:  0 4px 16px rgba(0, 0, 0, 0.45);
+  --shadow-glow: 0 0 32px rgba(79, 227, 218, 0.18);
+}

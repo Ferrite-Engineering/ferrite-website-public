@@ -1,0 +1,116 @@
+/* Element styles — typography, links, common patterns. */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--fs-md);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  /* Subtle gradient halo at the top to echo the logo's energy burst */
+  background-image:
+    radial-gradient(ellipse 1200px 600px at 50% -200px, rgba(79, 227, 218, 0.06), transparent 60%),
+    radial-gradient(ellipse 800px 400px at 80% -100px, rgba(46, 168, 255, 0.05), transparent 60%);
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.15;
+  color: var(--color-text);
+}
+
+h1 { font-size: var(--fs-3xl); }
+h2 { font-size: var(--fs-2xl); }
+h3 { font-size: var(--fs-xl); }
+h4 { font-size: var(--fs-lg); }
+
+@media (min-width: 768px) {
+  h1 { font-size: var(--fs-4xl); }
+  h2 { font-size: var(--fs-3xl); }
+}
+
+p {
+  margin: 0;
+  color: var(--color-text);
+}
+
+a {
+  color: var(--color-accent-2);
+  transition: color 120ms ease;
+}
+
+a:hover { color: var(--color-accent-2-bright); }
+
+code {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--r-sm);
+  padding: 0.1em 0.4em;
+}
+
+::selection {
+  background-color: rgba(79, 227, 218, 0.35);
+  color: var(--color-text);
+}
+
+:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+  border-radius: var(--r-sm);
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background-color: var(--color-accent);
+  color: var(--color-bg);
+  padding: var(--sp-2) var(--sp-4);
+  font-weight: 600;
+}
+.skip-link:focus { top: 0; }
+
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--sp-4);
+}
+
+@media (min-width: 768px) {
+  .container { padding: 0 var(--sp-8); }
+}
+
+/* ─── Responsive hardening ───────────────────────────────────────
+   Defensive rules so the site behaves on phones (≥ 320 dp), small
+   tablets, and split-screen windows without per-page edits. */
+
+html, body { overflow-x: hidden; max-width: 100%; }
+
+code { overflow-wrap: break-word; word-break: break-word; }
+
+pre {
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 768px) {
+  table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 479px) {
+  h1 { font-size: 2rem; line-height: 1.2; }
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.25rem; }
+}

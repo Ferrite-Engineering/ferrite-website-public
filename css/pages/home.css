@@ -1,0 +1,153 @@
+/* Home page — index.html */
+
+/* The hero on the company landing has the wordmark + tagline rendered
+   large, with the horizontal logo image displayed prominently above. */
+
+.hero__logo {
+  max-width: 520px;
+  margin: 0 auto var(--sp-8);
+}
+
+.hero__logo img {
+  width: 100%;
+  height: auto;
+}
+
+/* ─── Mission / shoulders-of-giants section ──────────────────── */
+.giants {
+  padding: var(--sp-24) 0;
+}
+
+.giants__container {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.giants__title {
+  margin-bottom: var(--sp-6);
+}
+
+.giants__body {
+  font-size: var(--fs-lg);
+  color: var(--color-text);
+  line-height: 1.7;
+  margin-bottom: var(--sp-6);
+}
+
+.giants__body--quiet {
+  color: var(--color-text-dim);
+  font-size: var(--fs-md);
+}
+
+/* ─── Product card ───────────────────────────────────────────── */
+.product {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--r-xl);
+  padding: var(--sp-12);
+  max-width: 920px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Soft gradient halo behind the product card */
+.product::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(79, 227, 218, 0.12) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.product::after {
+  content: "";
+  position: absolute;
+  bottom: -100px;
+  left: -100px;
+  width: 360px;
+  height: 360px;
+  background: radial-gradient(circle, rgba(46, 168, 255, 0.10) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.product__eyebrow {
+  display: inline-block;
+  padding: var(--sp-1) var(--sp-3);
+  margin-bottom: var(--sp-4);
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-accent-2);
+  background-color: rgba(79, 227, 218, 0.08);
+  border: 1px solid rgba(79, 227, 218, 0.25);
+  border-radius: var(--r-sm);
+  position: relative;
+}
+
+.product__name {
+  font-size: var(--fs-3xl);
+  margin-bottom: var(--sp-3);
+  background: var(--gradient-brand);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  position: relative;
+}
+
+.product__lede {
+  font-size: var(--fs-lg);
+  color: var(--color-text-dim);
+  max-width: 580px;
+  margin: 0 auto var(--sp-8);
+  position: relative;
+}
+
+.product__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--sp-3);
+  position: relative;
+}
+
+/* ─── Coming-up / future products list ───────────────────────── */
+.future {
+  margin-top: var(--sp-12);
+  text-align: center;
+}
+
+.future__head {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-text-dim);
+  margin-bottom: var(--sp-3);
+}
+
+.future__body {
+  color: var(--color-text-dim);
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+/* ─── Mobile-specific reductions ─────────────────────────────────
+   The product card uses generous desktop padding (sp-12 = 48 dp)
+   that crowds the content area on a 320 dp viewport. The giants
+   section similarly uses an indulgent vertical rhythm that we tone
+   down on phones. */
+@media (max-width: 600px) {
+  .product { padding: var(--sp-6); }
+  .product__name { font-size: var(--fs-2xl); }
+
+  .giants { padding: var(--sp-16) 0; }
+
+  .hero__logo { max-width: 360px; }
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Founder — Ferrite Engineering</title>
+  <meta name="description" content="Ferrite Engineering was founded by Martin Fink — a long-time advocate of open source, hardware, and modern systems engineering.">
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css?v=3">
+  <link rel="stylesheet" href="css/pages/about.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="nav">
+        <a class="nav__brand" href="index.html">
+          <img class="nav__brand-mark" src="img/logo-square-transparent.png" alt="" width="36" height="36">
+          <span class="nav__brand-name">Ferrite Engineering</span>
+        </a>
+        <nav class="nav__menu" aria-label="Primary">
+          <a href="index.html">Home</a>
+          <a href="about.html" class="is-active">Founder</a>
+        </nav>
+        <a class="btn btn--ghost nav__cta" href="index.html">Home</a>
+        <button class="nav__toggle" data-nav-toggle aria-label="Open menu" aria-expanded="false" aria-controls="nav-drawer">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="nav__drawer" id="nav-drawer" data-nav-drawer>
+      <a href="index.html">Home</a>
+      <a href="about.html">Founder</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="founder">
+      <div class="container">
+        <div class="founder__hero">
+          <!-- Replace with <img src="img/founder.jpg"> when a photo is available -->
+          <div class="founder__avatar" aria-hidden="true">MF</div>
+          <h1 class="founder__name">Martin Fink</h1>
+          <div class="founder__role">Founder · Engineer · Open-source long-timer</div>
+        </div>
+
+        <div class="founder__body">
+          <p>
+            Ferrite Engineering was founded by Martin Fink, an engineer who has spent his career
+            at the intersection of open source, hardware, and the systems that connect the two.
+            He started Ferrite for one reason: the open-source community has built an extraordinary
+            set of EDA tools, and there's a clear gap between those tools and the polished,
+            integrated products engineering teams actually want to use day-to-day. Closing that
+            gap — without abandoning the open-source foundations that make it possible — is what
+            Ferrite is here to do.
+          </p>
+
+          <div class="founder__contact">
+            <h3>Get in touch</h3>
+            <p style="color: var(--color-text-dim);">
+              For company inquiries, partnerships, or just to start a conversation.
+            </p>
+            <div class="founder__contact-links">
+              <a href="mailto:martin@ferrite-eng.com">martin@ferrite-eng.com</a>
+              <a href="https://www.linkedin.com/in/martinfink">LinkedIn</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__top">
+        <div>
+          <div class="footer__brand">
+            <img class="footer__brand-mark" src="img/logo-square-transparent.png" alt="" width="28" height="28">
+            <span>Ferrite Engineering</span>
+          </div>
+          <p class="footer__tagline">Modernizing the EDA toolchain.</p>
+        </div>
+        <nav class="footer__nav" aria-label="Footer">
+          <a href="index.html">Home</a>
+          <a href="about.html">Founder</a>
+          <a href="mailto:hello@ferrite-eng.com">Contact</a>
+        </nav>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span data-current-year>2026</span> Ferrite Engineering.</span>
+        <span>Built on the shoulders of giants.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
