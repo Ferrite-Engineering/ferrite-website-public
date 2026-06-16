@@ -9,8 +9,8 @@
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/tokens.css">
   <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/components.css?v=3">
-  <link rel="stylesheet" href="css/pages/home.css?v=3">
+  <link rel="stylesheet" href="css/components.css?v=7">
+  <link rel="stylesheet" href="css/pages/home.css?v=7">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -19,8 +19,11 @@
     <div class="container">
       <div class="nav">
         <a class="nav__brand" href="index.html">
-          <img class="nav__brand-mark" src="img/logo-square-transparent.png" alt="" width="36" height="36">
-          <span class="nav__brand-name">Ferrite Engineering</span>
+          <img class="nav__brand-mark" src="img/logo-square-transparent.png" alt="" width="56" height="56">
+          <span class="nav__brand-lock">
+            <span class="nav__brand-name">Ferrite Engineering</span>
+            <span class="nav__brand-tag">At the core</span>
+          </span>
         </a>
         <nav class="nav__menu" aria-label="Primary">
           <a href="index.html" class="is-active">Home</a>
@@ -43,12 +46,18 @@
     <section class="hero">
       <div class="container">
         <div class="hero__logo">
-          <img src="img/logo-horizontal-transparent.png" alt="Ferrite Engineering"
+          <img src="img/logo-horizontal-transparent.png" alt=""
                width="1408" height="564">
+        </div>
+        <!-- Brand signature: wordmark + "At the core" read as one unit,
+             both in the brand gradient; the white mission line sits below. -->
+        <div class="hero__lockup">
+          <h1 class="hero__name">Ferrite Engineering</h1>
+          <p class="hero__tagline">At the core</p>
         </div>
         <p class="hero__lede">
           <strong style="color: var(--color-text); font-weight: 600;">
-            Modernizing the EDA toolchain.
+            Modernizing the EDA toolchain
           </strong>
         </p>
       </div>
@@ -116,8 +125,11 @@
       <div class="footer__top">
         <div>
           <div class="footer__brand">
-            <img class="footer__brand-mark" src="img/logo-square-transparent.png" alt="" width="28" height="28">
-            <span>Ferrite Engineering</span>
+            <img class="footer__brand-mark" src="img/logo-square-transparent.png" alt="" width="34" height="34">
+            <span class="footer__brand-lock">
+              <span class="footer__brand-name">Ferrite Engineering</span>
+              <span class="footer__brand-tag">At the core</span>
+            </span>
           </div>
           <p class="footer__tagline">Modernizing the EDA toolchain.</p>
           <address class="footer__address" style="margin-top:.6rem;color:var(--color-text-dim);font-size:.85rem;font-style:normal;line-height:1.6;">

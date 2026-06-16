@@ -13,6 +13,56 @@
   height: auto;
 }
 
+/* ─── Hero brand lockup — wordmark + "At the core" as one unit ────
+   The horizontal mark sits above; the wordmark and tagline below read
+   as a single brand signature, with "core" carrying the brand
+   gradient. The pun reads three ways: the ferrite core itself, the
+   open-CORE products, and being at the core of the EDA toolchain. */
+.hero__lockup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-2);
+  margin: calc(-1 * var(--sp-2)) auto var(--sp-6);
+}
+
+.hero__name {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--fs-3xl);
+  letter-spacing: -0.01em;
+  line-height: 1.05;
+  background: var(--gradient-brand);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@media (min-width: 768px) {
+  .hero__name { font-size: var(--fs-4xl); }
+}
+
+.hero__tagline {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: var(--fs-lg);
+  letter-spacing: 0.04em;
+  line-height: 1;
+  /* Same brand gradient as the wordmark so the signature reads as one
+   * unit and recedes behind the white mission line below. */
+  background: var(--gradient-brand);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Mission line sits just below the brand signature — bumped up a
+   step from the component default so it carries more weight. */
+.hero__lede {
+  font-size: 1.25rem;
+}
+
 /* ─── Mission / shoulders-of-giants section ──────────────────── */
 .giants {
   padding: var(--sp-24) 0;
@@ -149,5 +199,7 @@
 
   .giants { padding: var(--sp-16) 0; }
 
-  .hero__logo { max-width: 360px; }
+  .hero__logo { max-width: 320px; margin-bottom: var(--sp-6); }
+  .hero__name { font-size: var(--fs-2xl); }
+  .hero__tagline { font-size: var(--fs-md); }
 }

@@ -28,16 +28,39 @@
 .nav__brand:hover { color: var(--color-text); }
 
 .nav__brand-mark {
-  width: 36px;
-  height: 36px;
+  /* Sized so the mark's height roughly matches the name+tagline stack. */
+  width: 56px;
+  height: 56px;
   flex-shrink: 0;
+}
+
+/* Name + tagline stack as one signature in the top-left banner. */
+.nav__brand-lock {
+  display: flex;
+  flex-direction: column;
+  gap: 0.05em;
+  line-height: 1;
 }
 
 .nav__brand-name {
   font-family: var(--font-display);
   font-weight: 600;
   font-size: var(--fs-lg);
+  line-height: 1.05;
   letter-spacing: -0.005em;
+  background: var(--gradient-brand);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.nav__brand-tag {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: var(--fs-xs);
+  letter-spacing: 0.04em;
+  line-height: 1;
+  /* Same brand gradient as the wordmark so the signature reads as one. */
   background: var(--gradient-brand);
   -webkit-background-clip: text;
   background-clip: text;
@@ -266,8 +289,34 @@
 }
 
 .footer__brand-mark {
-  width: 28px;
-  height: 28px;
+  width: 34px;
+  height: 34px;
+}
+
+/* Footer signature — name + "At the core" stacked, both in the brand
+   gradient so the lockup matches the hero and nav. */
+.footer__brand-lock {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  line-height: 1.05;
+}
+
+.footer__brand-name {
+  background: var(--gradient-brand);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.footer__brand-tag {
+  font-size: var(--fs-xs);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  background: var(--gradient-brand);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .footer__tagline {
@@ -313,5 +362,5 @@
   /* Wordmark in nav can crowd the hamburger toggle on a 320 dp phone;
      ease it down a touch so the layout stays balanced. */
   .nav__brand-name { font-size: var(--fs-md); }
-  .nav__brand-mark { width: 28px; height: 28px; }
+  .nav__brand-mark { width: 46px; height: 46px; }
 }
