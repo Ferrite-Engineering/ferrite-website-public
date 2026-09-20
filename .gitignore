@@ -4,3 +4,9 @@ node_modules/
 *.log
 .env*
 /dist
+
+# Credentials. This repository is public and deploys a static site; no
+# credential belongs in the tree under any of these spellings.
+.dev.vars
+.dev.vars.*
+.envrc

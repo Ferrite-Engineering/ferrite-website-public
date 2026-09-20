@@ -4,8 +4,8 @@ Public-facing static site for Ferrite Engineering, served via GitHub Pages.
 
 This is the **public-lean** site: it establishes that the company is real, keeps the
 "modernizing the EDA toolchain" and open-source positioning, names no products, and
-carries a short generic founder bio. The richer internal version (full founder bio,
-product detail) lives in the private `ferrite-website` repo.
+carries a short generic founder bio. A richer version (full founder bio, product
+detail) is maintained separately and is not published from here.
 
 ## Stack
 
